@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'bebas-neue';
+    src: url('/resources/Fonts/Bebas_Neue/BebasNeue-Regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'share-tech-mono';
+    src: url('/resources/Fonts/Share_Tech_Mono/ShareTechMono-Regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}

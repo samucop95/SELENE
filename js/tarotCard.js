@@ -1,5 +1,3 @@
-import showCard from "./preguntaData.js";
-
 export default class TarotCard {
     constructor(name, image, response = null, definition = null) {
         this.name = name;
@@ -8,7 +6,7 @@ export default class TarotCard {
         this.definition = definition;
         this.cardInfo();
     }
-    cardInfo(){
+    cardInfo() {
         this.section = document.getElementById('respuesta');
 
         const card = document.createElement('article');
@@ -32,5 +30,5 @@ export default class TarotCard {
 
         this.section.append(card);
         card.append(cardName, cardImage, cardResponse, cardDefinition);
-        }
+    }
 }

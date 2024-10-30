@@ -1,7 +1,8 @@
 import ShowMazos from "./mazos.js";
 
 export default class Form {
-    constructor() {
+    constructor(type) {
+        this.type = type;
         this.renderHtml();
     }
     renderHtml() {
@@ -93,7 +94,11 @@ export default class Form {
         this.section.addEventListener('submit', (e) => {
             e.preventDefault();
             this.section.innerHTML = '';
-            ShowMazos(themeSelect.value);
+            if(this.type == 1){
+                ShowMazos(themeSelect.value);
+            } else {
+                console.log('funciona');  
+            }  
         })
     
         this.section.appendChild(fieldset);

@@ -1,7 +1,4 @@
-import { getRandomCard } from "./api.js";
-import TarotCard from "./tarotCard.js";
-
-const data = {
+const positiveCards = {
     trabajo: ['El Mundo', 'El Juicio', 'El sol', 'La Estrella', 'El Diablo', 'La Templanza', 'La Muerte', 'La Justicia', 'La Rueda de la Fortuna', 'El Hermitaño', 'El Mago', 'La Sacerdotisa', 'La Emperatriz', 'El Emperador', 'El Papa', 'Los Enamorados', 'El Carro', 'La Fuerza'],
     amor: ['El Mundo', 'El Loco', 'El Juicio', 'El sol', 'La Estrella', 'La Templanza', 'La Muerte', 'La Justicia', 'La Rueda de la Fortuna', 'El Mago', 'La Sacerdotisa', 'La Emperatriz', 'El Papa', 'Los Enamorados', 'El Carro', 'La Fuerza'],
     finanzas: ['El Mundo', 'El Loco', 'El Juicio', 'El sol', 'La Estrella', 'El Diablo', 'La Templanza', 'El Colgado', 'La Justicia', 'La Rueda de la Fortuna', 'El Hermitaño', 'El Mago', 'La Sacerdotisa', 'La Emperatriz', 'El Emperador', 'El Papa', 'Los Enamorados', 'El Carro', 'La Fuerza'],
@@ -23,24 +20,8 @@ const noResponse = [
     "No, la carta ha indicado que no es el momento. Esto no significa que todo esté perdido; en cambio, te brinda la oportunidad de reexaminar tu enfoque y considerar nuevas estrategias. El futuro aún tiene mucho que ofrecer."
 ];
 
-export default async function showCard(theme) {
-    const container = document.getElementById('mazos');
-    container.innerHTML = '';
-
-    const selectedCard = await getRandomCard();
-    const result = {
-        selectedCard,
-        response: getrandomQuote(noResponse)
-    };
-    if (data[theme].includes(selectedCard.name)) {
-        result.response = getrandomQuote(yesResponse);
-    }
-    const newImage = './resources/images/prueba-carta.png'
-    const carta = new TarotCard(result.selectedCard.name, newImage, result.response, result.selectedCard.definition);
-    return carta;
-}
-
-function getrandomQuote(array) {
-    const randomIndex = Math.floor(Math.random() * array.length);
-    return array[randomIndex];
+export {
+    positiveCards,
+    yesResponse,
+    noResponse
 }

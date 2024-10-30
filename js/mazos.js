@@ -1,5 +1,4 @@
-import { getRandomCard } from "./api.js";
-import showCard from "./preguntaData.js";
+import showCard from "./index.js";
 
 export default function ShowMazos(theme) {
     const container = document.getElementById('mazos');

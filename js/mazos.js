@@ -1,6 +1,7 @@
-import showCard from "./index.js";
+import {showCard, showCards} from "./index.js";
 
-export default function ShowMazos(theme) {
+export default function ShowMazos(theme, type) {
+
     const container = document.getElementById('mazos');
     container.innerHTML = '';
     const pregunta = document.createElement('h3');
@@ -14,8 +15,11 @@ export default function ShowMazos(theme) {
     image1.classList.add('reverse-card', 'image1');
     image1.src = 'resources/images/reverso-carta.png';
     image1.addEventListener('click', () => {
-        const answer = showCard(theme);
-        return answer;
+        if (type === 1) {
+            const answer = showCard(theme);
+        } else {
+            const answer = showCards(theme);
+        }
     })
     
     const image2 = document.createElement('img');
@@ -23,7 +27,6 @@ export default function ShowMazos(theme) {
     image2.src = 'resources/images/reverso-carta.png';
     image2.addEventListener('click', () => {
         const answer = showCard(theme);
-        return answer;
     })
     
     const image3 = document.createElement('img');
@@ -31,7 +34,6 @@ export default function ShowMazos(theme) {
     image3.src = 'resources/images/reverso-carta.png';
     image3.addEventListener('click', () => {
         const answer = showCard(theme);
-        return answer;
     })
     
     container.append(pregunta, imageContainer);

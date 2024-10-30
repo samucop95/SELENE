@@ -41,10 +41,17 @@ async function getArcanosMayores() {
  }
 
  //FUNCION PARA OBTENER UNA CARTA RANDOM
-async function getRandomCard() {
+async function getRandomCard(numberOfCards) {
     const cards = await getArcanosMayores();
-    const randomIndex = Math.floor(Math.random() * cards.length);
-    return cards[randomIndex];
+    const selectedCards = [];
+    while (selectedCards.length < numberOfCards) {
+        const randomIndex = Math.floor(Math.random() * cards.length);
+        const card = cards[randomIndex];
+        if (!selectedCards.includes(card)) {
+            selectedCards.push(card);
+        }
+    }
+    return selectedCards;
  }
 
 export {

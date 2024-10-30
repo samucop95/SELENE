@@ -16,28 +16,47 @@ function showForm() {
     })
 }
 
-function getrandomQuote(array) {
+function getRandomQuote(array) {
     const randomIndex = Math.floor(Math.random() * array.length);
     return array[randomIndex];
 }
 
-export default async function showCard(theme) {
+async function showCard(theme) {
     const container = document.getElementById('mazos');
     container.innerHTML = '';
 
-    const selectedCard = await getRandomCard();
+    const selectedCards = await getRandomCard(1);
+    const selectedCard = selectedCards[0];
     const result = {
         selectedCard,
-        response: getrandomQuote(noResponse)
+        response: getRandomQuote(noResponse)
     };
     if (positiveCards[theme].includes(selectedCard.name)) {
-        result.response = getrandomQuote(yesResponse);
+        result.response = getRandomQuote(yesResponse);
     }
     const newImage = './resources/images/prueba-carta.png'
     const carta = new TarotCard(result.selectedCard.name, newImage, result.response, result.selectedCard.definition);
     return carta;
 }
 
+async function showCards(theme) {
+    const container = document.getElementById('mazos');
+    container.innerHTML = '';
+    let definition = false;
+
+    const selectedCards = await getRandomCard(3);
+    selectedCards.forEach(card => {
+        const newImage = './resources/images/prueba-carta.png';
+        const description = definition ? null : card[theme];
+        definition = true;
+        const carta = new TarotCard(card.name, newImage, null, description)
+    })
+}
 
 
 showForm();
+
+export {
+    showCard,
+    showCards
+}

@@ -94,11 +94,8 @@ export default class Form {
         this.section.addEventListener('submit', (e) => {
             e.preventDefault();
             this.section.innerHTML = '';
-            if(this.type == 1){
-                ShowMazos(themeSelect.value);
-            } else {
-                console.log('funciona');  
-            }  
+            ShowMazos(themeSelect.value, this.type);
+    
         })
     
         this.section.appendChild(fieldset);

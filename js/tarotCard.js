@@ -8,6 +8,7 @@ export default class TarotCard {
     }
     cardInfo() {
         this.section = document.getElementById('respuesta');
+        this.section1 = document.getElementById('respuesta-texto');
 
         const card = document.createElement('article');
         card.setAttribute('id', 'carta-final');
@@ -21,7 +22,7 @@ export default class TarotCard {
         cardName.innerText = this.name;
 
         const cardResponse = document.createElement('p');
-        cardResponse.setAttribute('id', 'respuesta-carta');
+        cardResponse.setAttribute('id', 'texto-carta');
         cardResponse.innerText = this.response;
 
         const cardDefinition = document.createElement('p');
@@ -29,6 +30,7 @@ export default class TarotCard {
         cardDefinition.innerText = this.definition;
 
         this.section.append(card);
-        card.append(cardName, cardImage, cardResponse, cardDefinition);
+        card.append(cardName, cardImage);
+        this.section1.append(cardDefinition, cardResponse);
     }
 }

@@ -26,14 +26,22 @@ export default function ShowMazos(theme, type) {
     image2.classList.add('reverse-card', 'image2');
     image2.src = 'resources/images/reverso-carta.png';
     image2.addEventListener('click', () => {
-        const answer = showCard(theme);
+        if (type === 1) {
+            const answer = showCard(theme);
+        } else {
+            const answer = showCards(theme);
+        }
     })
     
     const image3 = document.createElement('img');
     image3.classList.add('reverse-card', 'image3');
     image3.src = 'resources/images/reverso-carta.png';
     image3.addEventListener('click', () => {
-        const answer = showCard(theme);
+        if (type === 1) {
+            const answer = showCard(theme);
+        } else {
+            const answer = showCards(theme);
+        }
     })
     
     container.append(pregunta, imageContainer);

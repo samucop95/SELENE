@@ -34,14 +34,14 @@ async function showCard(theme) {
     if (positiveCards[theme].includes(selectedCard.name)) {
         result.response = getRandomQuote(yesResponse);
     }
-    const newImage = './resources/images/prueba-carta.png'
+    const newImage = './resources/images/prueba-carta.png';
     const carta = new TarotCard(result.selectedCard.name, newImage, result.response, result.selectedCard.definition);
     return carta;
 }
 
 async function showCards(theme) {
-    const container = document.getElementById('mazos');
-    container.innerHTML = '';
+    const container1 = document.getElementById('mazos');
+    container1.innerHTML = '';
     let definition = false;
 
     const selectedCards = await getRandomCard(3);

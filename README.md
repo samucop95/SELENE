@@ -27,8 +27,8 @@ Para ejecutar este proyecto en tu máquina local, sigue estos pasos:
 1. Clona el repositorio:
 
     ```bash
-    git clone https://github.com/tu-usuario/selene-tarot.git
-    cd selene-tarot
+    git clone https://github.com/tu-usuario/SELENE.git
+    cd SELENE
     ```
 
 2. Abre el archivo `index.html` en tu navegador preferido. Puedes abrirlo directamente haciendo doble clic, o si tienes un servidor de desarrollo, puedes iniciar el servidor y acceder a `http://localhost:3000`.

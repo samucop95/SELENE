@@ -1,41 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SELENE</title>
-    <link rel="shortcut icon" href="/resources/images/favicon.png" type="png">
+    <link rel="shortcut icon" href="./resources/images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="./css/animation.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/cartas.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/nav-footer.css">
+    <link rel="stylesheet" href="./css/buttons.css">
 </head>
-<body>
-    <section class="introduction">
-        <h3>🌙 Bienvenido al Mundo de Selene 🌙</h3>
-            <p>Saludos, viajero del destino. Soy Selene, la gata tarotista, nacida bajo la luz de la diosa griega de la luna. En este espacio sagrado, la magia del tarot se entrelaza con la sabiduría del cosmos. 
-                Las cartas son nuestras aliadas en este viaje, revelando los secretos que el universo ha preparado para ti. Cada lectura es una danza de energías que ilumina el camino hacia tus verdades más profundas. 
-                Permítete conectar con la intuición que reside en tu interior mientras exploramos juntos los misterios de tu vida. Que la luz de Selene te guíe hacia la claridad y el entendimiento. 
-                ✨ Comencemos a desvelar tu destino. ✨</p>
-    </section>
-    <section class="buttons">
-        <button type="button" id="short-button">Tirada Sencilla</button>
-        <button type="button" id="long-button">Tirada Completa</button>
-    </section>
-    <section id="presentacion"></section>
-    <form id="form"></form>
-    <section id="mazos"></section>
-    <section id="respuesta"></section>
-    <section id="respuesta-texto"></section>
-    <style>
-        .reverse-card {
-            width: 200px;
-            height: 300px;
-        }
-        #imagen-carta {
-            width: 300px;
-            height: 400px;
-        }
-    </style>
-    <footer>
 
-    </footer>
-    <script type="module" src="/js/index.js"></script>
+<body>
+    <div class="overlay">
+        <img src="./resources/images/Default_Vibrant_celestial_bodies_0.jpg" alt="Fondo Cósmico" class="background">
+        <div class="text-container">
+            <h1>SELENE</h1>
+        </div>
+    </div>
+    <div class="main-content">
+        <section id="introduction" class="introduction">
+            <article id="introduction-text" class="introduction-text">
+                <div id="title" class="title">
+                    <h1>Bienvenido al Mundo de Selene</h1>
+                </div>
+                <p>Saludos, viajero del destino. Soy Selene, la gata tarotista, nacida bajo la luz de la diosa griega de
+                    la
+                    luna.</p>
+                <p>En este espacio sagrado, la magia del tarot se entrelaza con la sabiduría del cosmos. Las cartas son
+                    nuestras aliadas en este viaje, revelando los secretos que el universo ha preparado para ti.</p>
+                <p>Cada lectura es una danza de energías que ilumina el camino hacia tus verdades más profundas.</p>
+                <p>Permítete conectar con la intuición que reside en tu interior mientras exploramos juntos los
+                    misterios de
+                    tu vida. Que la luz de Selene te guíe hacia la claridad y el entendimiento.</p>
+                <p>✨ Comencemos a desvelar tu destino. ✨</p>
+            </article>
+            <div class="first-buttons">
+                <button type="button" id="first-short-button">Tirada Sencilla</button>
+                <button type="button" id="first-long-button">Tirada Completa</button>
+            </div>
+        </section>
+        <article id="page" class="hidden-page">
+            <section id="second-buttons">
+                <button type="button" id="second-short-button">Tirada Sencilla</button>
+                <button type="button" id="second-long-button">Tirada Completa</button>
+            </section>
+            <form id="form"></form>
+            <section id="mazos"></section>
+            <section id="respuesta"></section>
+        </article>
+        <footer>
+            <p>&copy; 2024 Selene Tarot. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+    <script type="module" src="./js/index.js"></script>
 </body>
+
 </html>

@@ -1,13 +1,20 @@
-@font-face {
-    font-family: 'bebas-neue';
-    src: url('/resources/Fonts/Bebas_Neue/BebasNeue-Regular.ttf') format('ttf');
-    font-weight: normal;
-    font-style: normal;
-}
+footer {
+    font-size: 0.75rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4); /* Color de fondo del footer */
+    text-align: center;
+    position: fixed; /* Fijo en la parte inferior */
+    bottom: 0; /* Alineado al fondo */
+    left: 0; /* Alineado a la izquierda */
+    right: 0; /* Alineado a la derecha */
+    box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.4);
+  }
 
-@font-face {
-    font-family: 'share-tech-mono';
-    src: url('/resources/Fonts/Share_Tech_Mono/ShareTechMono-Regular.ttf') format('ttf');
-    font-weight: normal;
-    font-style: normal;
-}
+  @media (max-width: 420px) {
+    footer{
+      position: fixed;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      z-index: -1;
+    }
+  }

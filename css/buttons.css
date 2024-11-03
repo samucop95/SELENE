@@ -1,0 +1,40 @@
+#second-buttons {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    flex-wrap: wrap;
+    width: 100%;
+    z-index: 10;
+}
+.first-buttons {
+    margin-top: 60px;
+    padding-bottom: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#submit {
+    margin-top: 30px;
+}
+
+button {
+    padding: 10px 20px; /* Espacio interior del botón */
+    margin: 5px; /* Espacio entre los botones */
+    font-family: 'letrarot';
+    font-size: 20px; /* Tamaño del texto del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #727272; /* Color de fondo */
+    color: white; /* Color del texto */
+    transition: background-color 0.3s; /* Transición suave al cambiar de color */
+}
+
+button:hover {
+    background-color: rgba(65, 44, 87, 0.748); /* Cambia el color de fondo al pasar el mouse */
+}

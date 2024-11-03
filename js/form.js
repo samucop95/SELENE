@@ -6,71 +6,79 @@ export default class Form {
         this.renderHtml();
     }
     renderHtml() {
+        const page = document.getElementById('intro');
+        if (page) {
+            page.classList.remove('hidden-intro');
+            page.classList.add('intro');
+        }
+        
         this.section = document.getElementById('form');
         this.section.innerHTML = '';
+        this.section.classList.add('form');
 
-        const container = document.getElementById('mazos');
-        container.innerHTML = '';
+        const mazosContainer = document.getElementById('mazos');
+        mazosContainer.innerHTML = '';
 
-        const container1 = document.getElementById('respuesta');
-        container1.innerHTML = '';
-        
-        const container2 = document.getElementById('respuesta-texto');
-        container2.innerHTML = '';
-
-        this.textContainer = document.getElementById('presentacion')
-        this.textContainer.innerHTML = '';
+        const respuestaContainer = document.getElementById('respuesta');
+        respuestaContainer.innerHTML = '';
         
         if (this.type === 1) {
             const text1 = document.createElement('p');
             text1.setAttribute('class', 'presentacion');
             text1.innerText = 'Esta tirada te ofrece una única carta, que te responderá a una pregunta concreta sobre un tema de tu elección. Ideal para momentos de duda o cuando necesitas un "sí" o "no" claro. ¿Cuál es tu pregunta? Conéctate con tu intuición y elige sabiamente.';
-            this.textContainer.appendChild(text1);
+            this.section.append(text1);
         } else {
             const text2 = document.createElement('p');
             text2.setAttribute('class', 'presentacion');
             text2.innerText = 'Para quienes buscan una visión más profunda, esta tirada revela tres cartas que proporcionan una respuesta más amplia sobre el tema que desees explorar. Te ayudará a comprender mejor las energías y posibilidades que te rodean. ¿Qué aspecto de tu vida deseas explorar? Permite que las cartas guíen tu camino hacia una mayor claridad.';
-            this.textContainer.appendChild(text2);
+            this.section.append(text2);
         }
 
         const fieldset = document.createElement('fieldset');
         fieldset.setAttribute('id', 'questionsFieldset');
         
         //PREGUNTA 1
-        const questionName = document.createElement('div')
-        const questionNameLabel = document.createElement('label')
-        questionNameLabel.setAttribute('for', 'nombre');
-        questionNameLabel.innerText = '¿Cómo deseas que Selene te llame durante esta lectura?';
-        const questionNameInput = document.createElement('input');
-        questionNameInput.setAttribute('type', 'text');
-        questionNameInput.required = true;
-        questionName.append(questionNameLabel,questionNameInput);
+        const questionNameLabel = document.createElement('div')
+        const nameLabel = document.createElement('label')
+        nameLabel.setAttribute('for', 'nombre');
+        nameLabel.innerText = '¿Cómo deseas que Selene te llame durante esta lectura?';
+        const questionNameInput = document.createElement('div');
+        const nameInput = document.createElement('input');
+        nameInput.setAttribute('type', 'text');
+        nameInput.required = true;
+        questionNameLabel.append(nameLabel);
+        questionNameInput.append(nameInput);
 
         //PREGUNTA 2
-        const questionYear = document.createElement('div');
-        const questionYearLabel = document.createElement('label');
-        questionYearLabel.setAttribute('for', 'edad');
-        questionYearLabel.innerText = 'Indica el año en que el cosmos te trajo a este mundo';
-        const questionYearInput = document.createElement('input');
-        questionYearInput.setAttribute('type', 'date');
-        questionYearInput.required = true;
-        questionYear.append(questionYearLabel,questionYearInput);
+        const questionYearLabel = document.createElement('div');
+        const yearLabel = document.createElement('label');
+        yearLabel.setAttribute('for', 'edad');
+        yearLabel.innerText = 'Indica el año en que el cosmos te trajo a este mundo';
+        const questionYearInput = document.createElement('div');
+        const yearInput = document.createElement('input');
+        yearInput.setAttribute('type', 'date');
+        yearInput.required = true;
+        questionYearLabel.append(yearLabel);
+        questionYearInput.append(yearInput);
 
         //PREGUNTA 3
-        const questionSign = document.createElement('div');
-        const questionSignLabel = document.createElement('label');
-        questionSignLabel.setAttribute('for', 'signo');
-        questionSignLabel.innerText = '¿Cuál es tu signo? Esto ayudará a Selene a entender la energía de tu carta astral';
-        const questionSignInput = document.createElement('input');
-        questionSignInput.setAttribute('type', 'text');
-        questionSignInput.required = true;
-        questionSign.append(questionSignLabel,questionSignInput);
+        const questionSignLabel = document.createElement('div');
+        const signLabel = document.createElement('label');
+        signLabel.setAttribute('for', 'signo');
+        signLabel.innerText = '¿Cuál es tu signo? Esto ayudará a Selene a entender la energía de tu carta astral';
+        const questionSignInput = document.createElement('div');
+        const signInput = document.createElement('input');
+        signInput.setAttribute('type', 'text');
+        signInput.required = true;
+        questionSignLabel.append(signLabel);
+        questionSignInput.append(signInput);
 
         //PREGUNTA 4
-        const theme = document.createElement('div');
+        const questionThemeLabel = document.createElement('div');
         const themeLabel = document.createElement('label');
         themeLabel.setAttribute('for', 'tema');
         themeLabel.innerText = '¿Sobre qué aspecto de tu vida deseas recibir orientación?';
+        const questionThemeSelect = document.createElement('div');
         const themeSelect = document.createElement('select');
         themeSelect.setAttribute('name', 'tema');
         themeSelect.required = true;
@@ -93,17 +101,22 @@ export default class Form {
         themeOption6.setAttribute ('value', 'espiritualidad');
         themeOption6.innerText = 'Espiritualidad';
         themeSelect.append(themeOption1, themeOption2, themeOption3, themeOption4, themeOption5, themeOption6);
-        theme.append(themeLabel,themeSelect);
+        questionThemeLabel.append(themeLabel);
+        questionThemeSelect.append(themeSelect);
         
         //PREGUNTA 5
-        const question = document.createElement('div');
-        const questionLabel = document.createElement('label');
-        questionLabel.setAttribute('for', 'pregunta');
-        questionLabel.innerText = 'Concentra tu mente y plantea la pregunta que deseas que Selene responda';
-        const questionInput = document.createElement('input');
-        questionInput.setAttribute('type', 'text');
-        questionInput.required = true;
-        question.append(questionLabel,questionInput);
+        const questionQueryLabel = document.createElement('div');
+        const queryLabel = document.createElement('label');
+        queryLabel.setAttribute('for', 'pregunta');
+        queryLabel.innerText = 'Concentra tu mente y plantea la pregunta que deseas que Selene responda';
+        const questionQueryInput = document.createElement('div');
+        const queryInput = document.createElement('textarea');
+        queryInput.setAttribute('type', 'text');
+        queryInput.rows = 5;
+        queryInput.cols = 30;
+        queryInput.required = true;
+        questionQueryLabel.append(queryLabel);
+        questionQueryInput.append(queryInput);
 
         const sendButton = document.createElement('button');
         sendButton.setAttribute('type', 'submit');
@@ -112,13 +125,14 @@ export default class Form {
         this.section.addEventListener('submit', (e) => {
             e.preventDefault();
             this.section.innerHTML = '';
-            this.textContainer.innerHTML = '';
+            mazosContainer.innerHTML = '';
+            this.section.classList.remove('form');
+            this.section.classList.add('hidden-form');
             ShowMazos(themeSelect.value, this.type);
-    
         })
     
         this.section.append(fieldset);
-        fieldset.append(questionName, questionYear, questionSign, theme, question, sendButton);
+        fieldset.append(questionNameLabel, questionNameInput, questionYearLabel, questionYearInput, questionSignLabel, questionSignInput, questionThemeLabel, questionThemeSelect, questionQueryLabel, questionQueryInput, sendButton);
         return fieldset;
     }
 }

@@ -1,0 +1,48 @@
+.main-content {
+    display: none;
+    padding: 20px;
+    opacity: 0; /* Inicialmente oculto */
+    transition: opacity 1s ease; /* Añadir transición */
+}
+body {
+    margin: 0;
+    font-family: 'letrarot';
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro con opacidad */
+    z-index: 1000; /* Asegúrate de que esté por encima de todo */
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: blur(2px) brightness(60%);
+}
+
+.text-container {
+    color: rgb(214, 214, 214);
+    text-align: center;
+    z-index: 1; /* Asegúrate de que el texto esté encima de la imagen */
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+
+.text-container h1 {
+    font-size: 8rem;
+}

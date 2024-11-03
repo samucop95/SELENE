@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'letrarot';
+}
+
+.hidden-mazos,
+.hidden-intro,
+.hidden-page,
+.hidden-respuesta,
+.hidden-buttons {
+    display: none;
+}
+
+body {
+    background-color: #131e2a;
+    display: flex;
+    flex-direction: column;
+    /* Para colocar el footer al final */
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+}
+
+body {
+    background-image: url('../resources/images/bola-cristal-fondo.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    position: absolute;
+    background-size: cover;
+
+}
+
+.introduction-text,
+.form,
+.mazos,
+.respuesta-sencilla {
+    color: azure;
+    margin: 0 3rem 3rem 3rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10%;
+    box-shadow: 0 0 40px 40px rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(1px);
+}
+
+#respuesta {
+    margin-top: 100px;
+}
+
+.respuesta-completa {
+    color: azure;
+    margin: 0 3rem 3rem 3rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10%;
+    box-shadow: 0 0 40px 40px rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(1px);
+}
+
+.introduction-text {
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+.form {
+    margin-top: 100px;
+    font-size: 20px;
+}
+
+.introduction p {
+    line-height: 1.5rem;
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 2rem;
+}
+
+.title h1 {
+    font-size: 4rem;
+}
+
+.main-content {
+    height: 100vh;
+    align-content: center;
+    width: 100%;
+}
+
+#bola-cristal {
+    width: 100px;
+    height: 100px;
+}
+
+.presentacion {
+    margin-bottom: 20px;
+}
+
+fieldset {
+    border-style: none;
+    align-self: center;
+}
+
+fieldset div {
+    padding: 5px 10px 0 0;
+}

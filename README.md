@@ -1,34 +1,42 @@
-# SELENE 🌕 - Tu Guía Lunar y Astronómica
+# SELENE Tarot - Bienvenido al Mundo de la Sabiduría Cósmica
 
-Selene es una plataforma en línea dedicada a ofrecer información detallada sobre las fases de la Luna, eventos astronómicos importantes y lanzamientos espaciales. Inspirada en la diosa griega de la Luna, Selene utiliza la API de la NASA para proporcionar datos en tiempo real sobre la Luna y otros eventos astronómicos, además de incluir una vista de calendario interactiva.
+![SELENE](./resources/images/Default_Vibrant_celestial_bodies_0.jpg)
 
-## 🚀 Características
+## Descripción
 
-1. **Fases de la Luna**: Consulta las fases lunares actuales y futuras, junto con eventos importantes como eclipses, apogeos, perigeos y lunas llenas.
-2. **Calendario de Eventos Astronómicos**: Descubre eventos celestes en un calendario interactivo, incluyendo:
-   - Eclipses solares y lunares
-   - Lluvias de meteoros
-   - Alineaciones planetarias
-3. **Lanzamientos Espaciales**: Información histórica y futura sobre misiones espaciales importantes y lanzamientos de agencias como la NASA y SpaceX.
+**SELENE** es una página web dedicada a la lectura del tarot, guiada por Selene, una gata tarotista inspirada en la diosa griega de la luna. Este proyecto ofrece un espacio místico donde las cartas y el cosmos revelan los secretos del universo para iluminar el camino de quienes buscan respuestas.
 
-## 🛰️ APIs Utilizadas
+### Funcionalidades Principales
 
-- **API de la NASA**: Para obtener datos astronómicos, información de misiones y lanzamientos.
-- **[Otras APIs de soporte]**: (ej. Open Notify para obtener posiciones de la ISS o similares si es necesario).
+- **Lecturas de Tarot**: El usuario puede elegir entre una "Tirada Sencilla" o una "Tirada Completa" para descubrir su destino.
+- **Interfaz Mística**: Fondo cósmico y elementos visuales que crean una atmósfera de inmersión en la lectura de cartas.
+- **Respuestas en Tiempo Real**: La aplicación permite al usuario obtener respuestas basadas en sus elecciones de cartas.
 
-## 📅 Calendario Interactivo
 
-Selene incluye un calendario interactivo que te permite visualizar eventos astronómicos futuros y pasados, organizados por categorías, con una sección especial para lanzamientos históricos y próximos.
+## Tecnologías Utilizadas
 
-## 🎨 Tecnologías
+- **HTML5 y CSS3**: Para la estructura y el estilo de la página web.
+- **JavaScript**: Para la lógica de interacción y control de flujo de la aplicación.
+- **Módulos de ES6**: Uso de JavaScript modular para organizar el código de manera clara.
+- **Recursos Multimedios**: Imágenes y animaciones que añaden misticismo y autenticidad a la experiencia.
 
-- **Frontend**: HTML, CSS, JavaScript, [Frameworks como React o Vue.js opcionalmente].
-- **Backend**: Node.js o Python (Django/Flask).
-- **API**: Integración con la API de la NASA.
-- **Base de Datos**: MongoDB o Firebase (para almacenar datos adicionales de eventos históricos o próximos).
+## Instalación
 
-## 💻 Instalación y Uso
+Para ejecutar este proyecto en tu máquina local, sigue estos pasos:
 
-1. Clonar el repositorio.
-   ```bash
-   git clone https://github.com/tu_usuario/selene.git
+1. Clona el repositorio:
+
+    ```bash
+    git clone https://github.com/tu-usuario/selene-tarot.git
+    cd selene-tarot
+    ```
+
+2. Abre el archivo `index.html` en tu navegador preferido. Puedes abrirlo directamente haciendo doble clic, o si tienes un servidor de desarrollo, puedes iniciar el servidor y acceder a `http://localhost:3000`.
+
+> **Nota**: Para que los estilos y scripts funcionen correctamente, asegúrate de que la estructura de archivos coincida con la del proyecto y de que las rutas de las imágenes, CSS y JS sean accesibles.
+
+## Uso
+
+1. **Navegación**: Al abrir la página, verás una introducción de Selene, la gata tarotista, invitándote a explorar los secretos del tarot.
+2. **Elección de Tirada**: Selecciona entre "Tirada Sencilla" o "Tirada Completa" según la profundidad de lectura que prefieras.
+3. **Interpretación de Respuestas**: La página desplegará las cartas y sus significados para ayudarte a descubrir los mensajes ocultos en tu vida.

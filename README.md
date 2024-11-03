@@ -1,6 +1,6 @@
-# SELENE Tarot - Bienvenido al Mundo de la Sabiduría Cósmica
+# SELENE
 
-![SELENE](./resources/images/Default_Vibrant_celestial_bodies_0.jpg)
+![SELENE](resources/images/UniversalUpscaler_08b716c4-dcfa-4a94-b8a7-ae2f317eb3f8.jpg)
 
 ## Descripción
 

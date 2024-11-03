@@ -2,7 +2,7 @@
 
 Este archivo documenta los cambios importantes realizados en el proyecto **SELENE**.
 
-## [1.2.0] - 2024-11-02
+## [1.2.0]
 ### Añadido
 - **Animación de introducción** mejorada en la página principal.
 - **Compatibilidad móvil mejorada**: Ajustes en la navegación y el diseño responsivo para mejorar la experiencia en dispositivos móviles.
@@ -13,7 +13,7 @@ Este archivo documenta los cambios importantes realizados en el proyecto **SELEN
 
 ---
 
-## [1.1.0] - 2024-10-20
+## [1.1.0]
 ### Añadido
 - Sección básica de mazos de cartas y espacio para mostrar la respuesta.
 - **Sección de Resultados** que muestra una breve interpretación de las cartas seleccionadas.

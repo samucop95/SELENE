@@ -5,6 +5,10 @@
     font-family: 'letrarot';
 }
 
+.favicon {
+    border-radius: 50%;
+}
+
 .hidden-mazos,
 .hidden-intro,
 .hidden-page,
@@ -17,7 +21,6 @@ body {
     background-color: #131e2a;
     display: flex;
     flex-direction: column;
-    /* Para colocar el footer al final */
     align-items: center;
     text-align: center;
     justify-content: center;

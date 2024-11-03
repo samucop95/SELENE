@@ -38,9 +38,9 @@ async function getArcanosMayores() {
     const resultArcanosMayores = await fetchData('cards/type/mayor');
     const arcanosMayores = cardInformation(resultArcanosMayores);
     return arcanosMayores;
- }
+}
 
- //FUNCION PARA OBTENER UNA CARTA RANDOM
+//FUNCION PARA OBTENER UNA CARTA RANDOM
 async function getRandomCard(numberOfCards) {
     const cards = await getArcanosMayores();
     const selectedCards = [];
@@ -52,7 +52,7 @@ async function getRandomCard(numberOfCards) {
         }
     }
     return selectedCards;
- }
+}
 
 export {
     getArcanosMayores,

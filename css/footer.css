@@ -1,12 +1,12 @@
 footer {
     font-size: 0.75rem;
     color: white;
-    background-color: rgba(0, 0, 0, 0.4); /* Color de fondo del footer */
+    background-color: rgba(0, 0, 0, 0.4);
     text-align: center;
-    position: fixed; /* Fijo en la parte inferior */
-    bottom: 0; /* Alineado al fondo */
-    left: 0; /* Alineado a la izquierda */
-    right: 0; /* Alineado a la derecha */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
     box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.4);
   }
 

@@ -104,23 +104,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const textContainer = document.querySelector('.text-container');
     const mainContent = document.querySelector('.main-content');
 
-    // Hacer que el texto aparezca
     setTimeout(() => {
-        textContainer.style.opacity = 1; // Hace que el texto aparezca
-    }, 1000); // Espera 1 segundo para mostrar el texto
+        textContainer.style.opacity = 1;
+    }, 1000);
 
-    // Después de 5 segundos, desaparecer todo
     setTimeout(() => {
-        overlay.style.opacity = 0; // Desaparece la superposición
-        textContainer.style.opacity = 0; // Desaparece el texto
-    }, 5000); // 5 segundos
+        overlay.style.opacity = 0;
+        textContainer.style.opacity = 0;
+    }, 5000);
 
-    // Después de que la superposición desaparezca, muestra el contenido principal
     overlay.addEventListener('transitionend', () => {
         if (overlay.style.opacity === '0') {
-            overlay.style.display = 'none'; // Oculta la superposición
-            mainContent.style.display = 'block'; // Muestra el contenido principal
-            mainContent.style.opacity = 1; // Cambia la opacidad del contenido principal a 1
+            overlay.style.display = 'none';
+            mainContent.style.display = 'block';
+            mainContent.style.opacity = 1;
         }
     });
 });

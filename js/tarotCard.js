@@ -62,8 +62,6 @@ export default class TarotCard {
             cardDefinition.setAttribute('id', 'definicion-carta');
             cardDefinition.innerText = this.definition;
             cardDefinition.classList.add('definicion-carta');
-
-            // Solo agrega la definición si no existe
             this.cards.append(cardDefinition);
         }
 

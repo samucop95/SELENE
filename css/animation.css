@@ -1,9 +1,10 @@
 .main-content {
     display: none;
     padding: 20px;
-    opacity: 0; /* Inicialmente oculto */
-    transition: opacity 1s ease; /* Añadir transición */
+    opacity: 0;
+    transition: opacity 1s ease;
 }
+
 body {
     margin: 0;
     font-family: 'letrarot';
@@ -19,8 +20,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro con opacidad */
-    z-index: 1000; /* Asegúrate de que esté por encima de todo */
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
     opacity: 1;
     transition: opacity 1s ease;
 }
@@ -38,7 +39,7 @@ body {
 .text-container {
     color: rgb(214, 214, 214);
     text-align: center;
-    z-index: 1; /* Asegúrate de que el texto esté encima de la imagen */
+    z-index: 1;
     opacity: 0;
     transition: opacity 2s ease;
 }

@@ -11,7 +11,7 @@ export default class Form {
             page.classList.remove('hidden-intro');
             page.classList.add('intro');
         }
-        
+
         this.section = document.getElementById('form');
         this.section.innerHTML = '';
         this.section.classList.add('form');
@@ -21,7 +21,7 @@ export default class Form {
 
         const respuestaContainer = document.getElementById('respuesta');
         respuestaContainer.innerHTML = '';
-        
+
         if (this.type === 1) {
             const text1 = document.createElement('p');
             text1.setAttribute('class', 'presentacion');
@@ -36,7 +36,7 @@ export default class Form {
 
         const fieldset = document.createElement('fieldset');
         fieldset.setAttribute('id', 'questionsFieldset');
-        
+
         //PREGUNTA 1
         const questionNameLabel = document.createElement('div')
         const nameLabel = document.createElement('label')
@@ -83,27 +83,27 @@ export default class Form {
         themeSelect.setAttribute('name', 'tema');
         themeSelect.required = true;
         const themeOption1 = document.createElement('option');
-        themeOption1.setAttribute ('value', '');
+        themeOption1.setAttribute('value', '');
         themeOption1.innerText = 'Selecciona una opción';
         const themeOption2 = document.createElement('option');
-        themeOption2.setAttribute ('value', 'amor');
+        themeOption2.setAttribute('value', 'amor');
         themeOption2.innerText = 'Amor';
         const themeOption3 = document.createElement('option');
-        themeOption3.setAttribute ('value', 'salud');
+        themeOption3.setAttribute('value', 'salud');
         themeOption3.innerText = 'Salud';
         const themeOption4 = document.createElement('option');
-        themeOption4.setAttribute ('value', 'finanzas');
+        themeOption4.setAttribute('value', 'finanzas');
         themeOption4.innerText = 'Finanzas';
         const themeOption5 = document.createElement('option');
-        themeOption5.setAttribute ('value', 'trabajo');
+        themeOption5.setAttribute('value', 'trabajo');
         themeOption5.innerText = 'Trabajo';
         const themeOption6 = document.createElement('option');
-        themeOption6.setAttribute ('value', 'espiritualidad');
+        themeOption6.setAttribute('value', 'espiritualidad');
         themeOption6.innerText = 'Espiritualidad';
         themeSelect.append(themeOption1, themeOption2, themeOption3, themeOption4, themeOption5, themeOption6);
         questionThemeLabel.append(themeLabel);
         questionThemeSelect.append(themeSelect);
-        
+
         //PREGUNTA 5
         const questionQueryLabel = document.createElement('div');
         const queryLabel = document.createElement('label');
@@ -130,7 +130,7 @@ export default class Form {
             this.section.classList.add('hidden-form');
             ShowMazos(themeSelect.value, this.type);
         })
-    
+
         this.section.append(fieldset);
         fieldset.append(questionNameLabel, questionNameInput, questionYearLabel, questionYearInput, questionSignLabel, questionSignInput, questionThemeLabel, questionThemeSelect, questionQueryLabel, questionQueryInput, sendButton);
         return fieldset;
